@@ -1,0 +1,113 @@
+@use "./vars.scss" as *;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    row-gap: $section-padding-y;
+
+    .hero-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        column-gap: 30px;
+
+        .hero-body {
+            display: flex;
+            flex-direction: column;
+            max-width: 531px;
+            row-gap: 35px;
+            align-items: start;
+
+            .hero-title {
+                @include mobile {
+                    order: -2;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .hero-description {
+                font-size: 20px;
+                line-height: 1.4;
+
+                @include mobile {
+                    margin-bottom: 40px;
+                }
+            }
+
+            .hero-button {
+                @include mobile {
+                    width: 100%;
+                    max-width: 390px;
+                    margin-inline: auto;
+                }
+            }
+
+            @include mobile {
+                display: contents;
+            }
+        }
+
+        .hero-image {
+            @include tablet {
+                height: auto;
+                max-width: 40%;
+            }
+
+            @include mobile {
+                order: -1;
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    .hero-partners {
+        .hero-partners-list { 
+            display: flex;
+            justify-content: space-between;
+            column-gap: 37px;
+
+            .hero-partners-item {
+                .hero-partners-image {
+                    filter: grayscale(1);
+                }
+
+                @include tablet {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                @include mobile-s {
+                    display: flex;
+                    justify-content: start;
+
+                    &:nth-child(-n + 3) {
+                        justify-content: end;
+                    }
+                }
+            }
+
+            @include tablet {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 20px;
+            }
+
+            @include mobile-s {
+                column-gap: 0;
+                width: calc(100vw + 120px);
+                margin-left: calc(-1*(60px + $container-padding-x));
+            }
+        }
+    }
+
+
+    @include desktop {
+        row-gap: 60px;
+    }
+}

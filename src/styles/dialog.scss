@@ -1,0 +1,39 @@
+@use "./vars.scss" as *;
+
+.mobile-overlay {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 14px 20px;
+
+    &:modal {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .mobile-overlay-close-button-wrapper {
+        display: flex;
+        justify-content: end;
+
+        .mobile-overlay-close-button {
+
+        }
+    }
+
+    .mobile-overlay-body {
+        .mobile-overlay-menu-list {
+            @include flex-center(false);
+
+            flex-direction: column;
+            row-gap: 30px;
+
+            min-height: 80vh;
+
+            .mobile-overlay-menu-item {
+                .mobile-overlay-menu-link {
+
+                }
+            }
+        }
+    }
+}

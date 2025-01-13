@@ -1,0 +1,141 @@
+doctype html
+html(lang='en')
+    head
+        title Positivus
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="style.scss")
+        script(src="index.js")
+    body
+        header.header
+            div.header-inner.container
+                a.header-logo(href="/")
+                    img.header-logo-image(src="./images/logo.svg" alt="Positivus Logo" width="220" height="35")
+                nav.header-menu.hidden-mobile
+                    ul.header-menu-list
+                        li.header-menu-item
+                            a.header-menu-link(href="") About us
+                        li.header-menu-item
+                            a.header-menu-link(href="") Services
+                        li.header-menu-item
+                            a.header-menu-link(href="") Use Cases
+                        li.header-menu-item
+                            a.header-menu-link(href="") Pricing
+                        li.header-menu-item
+                            a.header-menu-link(href="") Blog
+                button.header-button.button.transparent.hidden-mobile(type="button") Request a quote
+                button.header-burger-menu.burger-button.visible-mobile(onclick="dialogOpen()")
+                    snap.visually-hidden Open navigation menu
+        main.content
+            section.section.section-hidden-x.container 
+                div.section-body
+                    div.hero
+                        div.hero-main
+                            div.hero-body
+                                h1.hero-title Navigation the digital landscape for success
+                                div.hero-description
+                                    p Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
+                                button.hero-button.button(type="button") Book a consultation
+                            img.hero-image(src="./images/hero-bg.svg", width="600", height="515")
+                        div.hero-partners
+                            h2.visually-hidden Our partners
+                            ul.hero-partners-list
+                                li.hero-partners-item
+                                    img.hero-partners-image(src="./images/partners/amazon.svg", alt="amazon", width="130", height="48")
+                                li.hero-partners-item
+                                    img.hero-partners-image(src="./images/partners/dribble.svg", alt="dribble", width="130", height="48")
+                                li.hero-partners-item
+                                    img.hero-partners-image(src="./images/partners/hubspot.svg", alt="hubspot", width="130", height="48")
+                                li.hero-partners-item
+                                    img.hero-partners-image(src="./images/partners/notion.svg", alt="notion", width="130", height="48")
+                                li.hero-partners-item
+                                    img.hero-partners-image(src="./images/partners/netflix.svg", alt="netflix", width="130", height="48")
+                                li.hero-partners-item
+                                    img.hero-partners-image(src="./images/partners/zoom.svg", alt="zoom", width="130", height="48")
+            section.section.container
+                header.section-header
+                    h2.section-title.puddle-bg Services
+                    div.section-description
+                        p At our digital
+                div.section-body
+                    div.services
+                        ul.services-list
+                            li.services-item
+                                article.services-card
+                                    div.services-card-body
+                                        h3.services-card-title
+                                            snap.puddle-bg Search engine
+                                            snap.puddle-bg optimization
+                                        a.service-card-link(href="/")
+                                            snap.service-card-link-icon-wrapper
+                                                include images/icons/arrow-top-right.svg
+                                            snap.service-card-link-label Learn more
+                                    img.services-card-image(src="./images/services/1.svg", alt="", width="210", height="170")
+                                article.services-card
+                                    div.services-card-body
+                                        h3.services-card-title
+                                            snap.puddle-bg Search engine
+                                            snap.puddle-bg optimization
+                                        a.service-card-link(href="/")
+                                            snap.service-card-link-icon-wrapper
+                                                include images/icons/arrow-top-right.svg
+                                            snap.service-card-link-label Learn more
+                                    img.services-card-image(src="./images/services/2.svg", alt="", width="210", height="170")
+                                article.services-card
+                                    div.services-card-body
+                                        h3.services-card-title
+                                            snap.puddle-bg Search engine
+                                            snap.puddle-bg optimization
+                                        a.service-card-link(href="/")
+                                            snap.service-card-link-icon-wrapper
+                                                include images/icons/arrow-top-right.svg
+                                            snap.service-card-link-label Learn more
+                                    img.services-card-image(src="./images/services/3.svg", alt="", width="210", height="170")
+                                article.services-card
+                                    div.services-card-body
+                                        h3.services-card-title
+                                            snap.puddle-bg Search engine
+                                            snap.puddle-bg optimization
+                                        a.service-card-link(href="/")
+                                            snap.service-card-link-icon-wrapper
+                                                include images/icons/arrow-top-right.svg
+                                            snap.service-card-link-label Learn more
+                                    img.services-card-image(src="./images/services/4.svg", alt="", width="210", height="170")
+                                article.services-card
+                                    div.services-card-body
+                                        h3.services-card-title
+                                            snap.puddle-bg Search engine
+                                            snap.puddle-bg optimization
+                                        a.service-card-link(href="/")
+                                            snap.service-card-link-icon-wrapper
+                                                include images/icons/arrow-top-right.svg
+                                            snap.service-card-link-label Learn more
+                                    img.services-card-image(src="./images/services/5.svg", alt="", width="210", height="170")
+                                article.services-card
+                                    div.services-card-body
+                                        h3.services-card-title
+                                            snap.puddle-bg Search engine
+                                            snap.puddle-bg optimization
+                                        a.service-card-link(href="/")
+                                            snap.service-card-link-icon-wrapper
+                                                include images/icons/arrow-top-right.svg
+                                            snap.service-card-link-label Learn more
+                                    img.services-card-image(src="./images/services/6.svg", alt="", width="210", height="170")
+                        div.services-banner.banner
+        footer.footer
+        dialog.mobile-overlay.visible-mobile(id="mobileOverlay")
+            form.mobile-overlay-close-button-wrapper(method="dialog")
+                button.mobile-overlay-close-button.cross-button(type="submit")
+                    snap.visually-hidden Close navigation menu
+            div.mobile-overlay-body
+                ul.mobile-overlay-menu-list
+                    li.mobile-overlay-menu-item
+                        a.mobile-overlay-menu-link(href="") About us
+                    li.mobile-overlay-menu-item
+                        a.mobile-overlay-menu-link(href="") Services
+                    li.mobile-overlay-menu-item
+                        a.mobile-overlay-menu-link(href="") Use Cases
+                    li.mobile-overlay-menu-item
+                        a.mobile-overlay-menu-link(href="") Pricing
+                    li.mobile-overlay-menu-item
+                        a.mobile-overlay-menu-link(href="") Blog
