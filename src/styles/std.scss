@@ -29,16 +29,7 @@
 }
 
 .visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    margin: -1px !important;
-    border: 0 !important;
-    padding: 0 !important;
-    white-space: nowrap !important;
-    clip-path: inset(100%) !important;
-    clip: rect(0 0 0 0) !important;
-    overflow: hidden !important;
+    @include visually-hidden;
 }
 
 .hidden-mobile {
@@ -113,14 +104,75 @@
     padding-block: $section-padding-y;
 
     .section-header {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
 
+        .section-title {
+
+        }
+
+        .section-description {
+            max-width: 580px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 80px;
+            
+            @include mobile {
+                margin-bottom: 40px;
+            }
+        }
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 30px;
+            text-align: center;
+        }
     }
 
     .section-body {
+
 
     }
 
     &.section-hidden-x {
         overflow-x: hidden;
+    }
+}
+
+.puddle-bg {
+    padding-inline: 7px;
+    background-color: $lime;
+    border-radius: $border-radius-small;
+
+
+    &.puddle-light {
+        background-color: $white;
+    }
+}
+
+.grid {
+    --gridColumns: 1;
+
+    @for $i from 2 through 12 {
+        &-#{$i} {
+            --gridColumns: #{$i};
+        }
+    }
+
+    display: grid;
+    grid-template-columns: repeat(var(--gridColumns), 1fr);
+    gap: 40px;
+
+    @include mobile {
+        gap: 30px;
+    }
+
+
+    &-2 {
+        @include tablet {
+            --gridColumns: 1;
+        }
     }
 }

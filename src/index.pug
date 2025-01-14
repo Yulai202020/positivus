@@ -56,10 +56,10 @@ html(lang='en')
                 header.section-header
                     h2.section-title.puddle-bg Services
                     div.section-description
-                        p At our digital
+                        p At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services included:
                 div.section-body
                     div.services
-                        ul.services-list
+                        ul.services-list.grid.grid-2
                             li.services-item
                                 article.services-card
                                     div.services-card-body
@@ -71,57 +71,229 @@ html(lang='en')
                                                 include images/icons/arrow-top-right.svg
                                             snap.service-card-link-label Learn more
                                     img.services-card-image(src="./images/services/1.svg", alt="", width="210", height="170")
-                                article.services-card
+                            li.services-item
+                                article.services-card.lime
                                     div.services-card-body
                                         h3.services-card-title
-                                            snap.puddle-bg Search engine
-                                            snap.puddle-bg optimization
+                                            snap.puddle-bg.puddle-light Pay-per-click
+                                            snap.puddle-bg.puddle-light advertising
                                         a.service-card-link(href="/")
                                             snap.service-card-link-icon-wrapper
                                                 include images/icons/arrow-top-right.svg
                                             snap.service-card-link-label Learn more
                                     img.services-card-image(src="./images/services/2.svg", alt="", width="210", height="170")
-                                article.services-card
+                            li.services-item
+                                article.services-card.dark
                                     div.services-card-body
                                         h3.services-card-title
-                                            snap.puddle-bg Search engine
-                                            snap.puddle-bg optimization
-                                        a.service-card-link(href="/")
+                                            snap.puddle-bg.puddle-light Social Media
+                                            snap.puddle-bg.puddle-light Marketing
+                                        a.service-card-link.light(href="/")
                                             snap.service-card-link-icon-wrapper
                                                 include images/icons/arrow-top-right.svg
                                             snap.service-card-link-label Learn more
                                     img.services-card-image(src="./images/services/3.svg", alt="", width="210", height="170")
+                            li.services-item
                                 article.services-card
                                     div.services-card-body
                                         h3.services-card-title
-                                            snap.puddle-bg Search engine
-                                            snap.puddle-bg optimization
+                                            snap.puddle-bg Email
+                                            snap.puddle-bg Marketing
                                         a.service-card-link(href="/")
                                             snap.service-card-link-icon-wrapper
                                                 include images/icons/arrow-top-right.svg
                                             snap.service-card-link-label Learn more
                                     img.services-card-image(src="./images/services/4.svg", alt="", width="210", height="170")
-                                article.services-card
+                            li.services-item
+                                article.services-card.lime
                                     div.services-card-body
                                         h3.services-card-title
-                                            snap.puddle-bg Search engine
-                                            snap.puddle-bg optimization
+                                            snap.puddle-bg.puddle-light Content
+                                            snap.puddle-bg.puddle-light Creation
                                         a.service-card-link(href="/")
                                             snap.service-card-link-icon-wrapper
                                                 include images/icons/arrow-top-right.svg
                                             snap.service-card-link-label Learn more
                                     img.services-card-image(src="./images/services/5.svg", alt="", width="210", height="170")
-                                article.services-card
+                            li.services-item
+                                article.services-card.dark
                                     div.services-card-body
                                         h3.services-card-title
-                                            snap.puddle-bg Search engine
-                                            snap.puddle-bg optimization
-                                        a.service-card-link(href="/")
+                                            snap.puddle-bg.puddle-light Analytics and
+                                            snap.puddle-bg.puddle-light Tracking
+                                        a.service-card-link.light(href="/")
                                             snap.service-card-link-icon-wrapper
                                                 include images/icons/arrow-top-right.svg
                                             snap.service-card-link-label Learn more
                                     img.services-card-image(src="./images/services/6.svg", alt="", width="210", height="170")
                         div.services-banner.banner
+                            div.banner-inner
+                                div.banner-body
+                                    h3.banner-title Let's make things happen
+                                    div.banner-description
+                                        p Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.
+                                    button.banner-button.button Get our free proposal
+                                img.banner-image.hidden-mobile(src="./images/banner-bg.svg", alt="", width="494", height="394")
+            section.section.section-hidden-x.container
+                header.section-header
+                    h2.section-title.puddle-bg Case Studies
+                    div.section-description
+                        p 
+                div.section-body
+                    div.studies
+                        ul.studies-list
+                            li.studies-item
+                                div.studies-description
+                                    p For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.
+                                a.studies-link
+                                    span Learn more
+                                    include images/icons/arrow-top-right.svg
+                            li.studies-item
+                                div.studies-description
+                                    p For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.
+                                a.studies-link
+                                    span Learn more
+                                    include images/icons/arrow-top-right.svg
+                            li.studies-item
+                                div.studies-description
+                                    p For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.
+                                a.studies-link
+                                    span Learn more
+                                    include images/icons/arrow-top-right.svg
+            section.section.container
+                header.section-header
+                    h2.section-title.puddle-bg Our Working Process
+                    div.section-description
+                        p
+                            | Step-by-Step Guide to Achieving
+                            br
+                            | You Business Goals
+                div.section-body
+                    div.process
+                        ol.process-list
+                            li.process-item
+                                details.process-accordion(open)
+                                    summary.process-accordion-header
+                                        h3.process-accordion-title Consultation
+                                        span.process-accordion-indicator
+                                    div.process-accordion-body
+                                        p During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.
+                            li.process-item
+                                details.process-accordion
+                                    summary.process-accordion-header
+                                        h3.process-accordion-title Research and Strategy Development
+                                        span.process-accordion-indicator
+                                    div.process-accordion-body
+                                        p During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.
+                            li.process-item
+                                details.process-accordion
+                                    summary.process-accordion-header
+                                        h3.process-accordion-title Implementation
+                                        span.process-accordion-indicator
+                                    div.process-accordion-body
+                                        p During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.
+                            li.process-item
+                                details.process-accordion
+                                    summary.process-accordion-header
+                                        h3.process-accordion-title Monitoring and Optimization
+                                        span.process-accordion-indicator
+                                    div.process-accordion-body
+                                        p During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.
+                            li.process-item
+                                details.process-accordion
+                                    summary.process-accordion-header
+                                        h3.process-accordion-title Reporting and Communication
+                                        span.process-accordion-indicator
+                                    div.process-accordion-body
+                                        p During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.
+                            li.process-item
+                                details.process-accordion
+                                    summary.process-accordion-header
+                                        h3.process-accordion-title Continual Improvement
+                                        span.process-accordion-indicator
+                                    div.process-accordion-body
+                                        p During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.
+            section.section.container
+                header.section-header
+                    h2.section-title.puddle-bg Team
+                    div.section-description
+                        p
+                            | Meet the skilled and experienced team behind our
+                            br
+                            | successful digital marketing strategies
+                div.section-body
+                    div.team
+                        ul.team-list.gird.grid-3
+                            li.team-item
+                                article.team-card
+                                    header.team-card-header
+                                        img.team-card-image(src="./images/team/1.svg", alt="", width="100", height="100")
+                                        div.team-card-info
+                                            h3.team-card-name John Smith
+                                            p.team-card-post CEO and Founder
+                                        a.team-card-link(href="/", target="_blank")
+                                            span.visually-hidden LinkedIn
+                                            include images/icons/linkedin.svg
+                                    div.team-card-body
+                            li.team-item
+                                article.team-card
+                                    header.team-card-header
+                                        img.team-card-image(src="./images/team/2.svg", alt="", width="100", height="100")
+                                        div.team-card-info
+                                            h3.team-card-name Jane Doe
+                                            p.team-card-post Director of Operations
+                                        a.team-card-link(href="/", target="_blank")
+                                            span.visually-hidden LinkedIn
+                                            include images/icons/linkedin.svg
+                                    div.team-card-body
+                            li.team-item
+                                article.team-card
+                                    header.team-card-header
+                                        img.team-card-image(src="./images/team/3.svg", alt="", width="100", height="100")
+                                        div.team-card-info
+                                            h3.team-card-name Michael Brown
+                                            p.team-card-post Senior SEO Specialist
+                                        a.team-card-link(href="/", target="_blank")
+                                            span.visually-hidden LinkedIn
+                                            include images/icons/linkedin.svg
+                                    div.team-card-body
+                            li.team-item
+                                article.team-card
+                                    header.team-card-header
+                                        img.team-card-image(src="./images/team/4.svg", alt="", width="100", height="100")
+                                        div.team-card-info
+                                            h3.team-card-name Emily Johnson
+                                            p.team-card-post PPC Manager
+                                        a.team-card-link(href="/", target="_blank")
+                                            span.visually-hidden LinkedIn
+                                            include images/icons/linkedin.svg
+                                    div.team-card-body
+                            li.team-item
+                                article.team-card
+                                    header.team-card-header
+                                        img.team-card-image(src="./images/team/5.svg", alt="", width="100", height="100")
+                                        div.team-card-info
+                                            h3.team-card-name Brian Williams
+                                            p.team-card-post
+                                                | Social Media
+                                                br
+                                                | Specialist
+                                        a.team-card-link(href="/", target="_blank")
+                                            span.visually-hidden LinkedIn
+                                            include images/icons/linkedin.svg
+                                    div.team-card-body
+                            li.team-item
+                                article.team-card
+                                    header.team-card-header
+                                        img.team-card-image(src="./images/team/6.svg", alt="", width="100", height="100")
+                                        div.team-card-info
+                                            h3.team-card-name Sarah Kim
+                                            p.team-card-post Content Creator
+                                        a.team-card-link(href="/", target="_blank")
+                                            span.visually-hidden LinkedIn
+                                            include images/icons/linkedin.svg
+                                    div.team-card-body
+                        button.team-button.button(type="button") See all team
         footer.footer
         dialog.mobile-overlay.visible-mobile(id="mobileOverlay")
             form.mobile-overlay-close-button-wrapper(method="dialog")

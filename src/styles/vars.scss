@@ -12,7 +12,7 @@ $border: 1px solid $dark;
 $border-radius-large: 45px;
 $border-radius: 14px;
 $border-radius-small: 7px;
-$border-shadow: 0 5px 0 0 $dark;
+$box-shadow: 0 5px 0 0 $dark;
 
 $font-base: "Space Grotesk", sans-serif;
 $container-width: 1240px;
@@ -75,6 +75,19 @@ $mobile-s: 480px;
 @mixin square($size) {
     width: $size;
     aspect-ratio: 1;
+}
+
+@mixin visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
 }
 
 
