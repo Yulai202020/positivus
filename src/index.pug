@@ -5,10 +5,6 @@ html(lang='en')
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="style.scss")
-        script(type="text/javascript").
-            function dialogOpen() {
-                document.getElementById("mobileOverlay").showModal();
-            }
     body
         header.header
             div.header-inner.container
@@ -27,7 +23,7 @@ html(lang='en')
                         li.header-menu-item
                             a.header-menu-link(href="") Blog
                 button.header-button.button.transparent.hidden-mobile(type="button") Request a quote
-                button.header-burger-menu.burger-button.visible-mobile(onclick="dialogOpen()")
+                button.header-burger-menu.burger-button.visible-mobile(onclick='document.getElementById("mobileOverlay").showModal()')
                     snap.visually-hidden Open navigation menu
         main.content
             section.section.section-hidden-x.container 
