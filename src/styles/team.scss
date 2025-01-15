@@ -51,6 +51,10 @@
                         color: $lime;
                         background-color: $black;
                         border-radius: 50%;
+
+                        svg {
+                            fill: $lime;
+                        }
                     }
                 }
 

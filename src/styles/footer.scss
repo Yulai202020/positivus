@@ -1,0 +1,192 @@
+@use "./vars.scss" as *;
+
+.footer {
+    .footer-inner {
+        padding: 55px 60px 50px;
+        color: $white;
+        background-color: $black;
+
+        .footer-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 30px;
+
+            .footer-logo {
+                .footer-logo-image {
+
+                }
+            }
+
+            .footer-menu {
+                .footer-menu-list {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 40px;
+
+                    .footer-menu-item {
+                        .footer-menu-link {
+                            @include hover {
+                                color: $lime;
+                            }
+
+                            display: inline-flex;
+                            align-items: center;
+                            height: 30px;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    @include mobile {
+                        flex-direction: column;
+                        row-gap: 15px;
+                    }
+                }
+            }
+
+            .footer-soc1als {
+                .soc1als-list {
+                    display: flex;
+                    column-gap: 20px;
+
+                    .soc1als-item {
+                        .soc1als-link {
+                            @include flex-center(true);
+                            @include square(30px);
+
+                            @include hover {
+                                background-color: $lime;
+                            }
+
+                            color: $black;
+                            background-color: $white;
+                            border-radius: 50%;
+
+                            svg {
+                                fill: $black;
+                                width: 50%;
+                                height: 50%;
+                            }
+                        }
+                    }
+                }
+
+                @include mobile {
+                    order: 1;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 66px;
+            }
+
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                row-gap: 37px;
+            }
+
+            @include mobile {
+                display: contents;
+            }
+        }
+
+        .footer-body {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 50px;
+
+            .footer-contacts {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                row-gap: 27px;
+
+                .footer-contacts-title {
+                    color: $black;
+                }
+
+                .footer-contacts-body {
+                    font-style: normal;
+
+                    p:not(:last-child) {
+                        margin-bottom: 20px;
+                        
+                        a {
+                            @include hover {
+                                color: $lime;
+                            }
+                        }
+                    }
+                }
+
+                @include mobile {
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+
+            @include mobile-above {
+                &:not(:last-child) {
+                    margin-bottom: 50px;
+                    padding-bottom: 50px;
+                    border-bottom: 1px solid currentColor;
+                }
+            }
+
+            @include mobile {
+                flex-direction:  column;
+                align-items: center;
+                row-gap: inherit;
+            }
+
+            @include mobile-s {
+                width: 100%;
+            }
+        }
+
+        .footer-extra {
+            display: flex;
+            column-gap: 40px;
+
+            .footer-copyright {
+
+            }
+
+            .footer-privacy-policy-link {
+                @include hover {
+                    color: $lime;
+                }
+
+                text-decoration: underline;                
+            }
+
+            @include mobile {
+                order: 2;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 15px;
+                width: 100%;
+                
+                border-top: 1px solid currentColor;
+                padding-top: 37px;
+            }
+        }
+
+        @include mobile-above {
+            border-radius: $border-radius-large $border-radius-large 0 0;
+        }
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 37px;
+            padding: 50px $container-padding-x 30px;
+        }
+    }
+
+    @include mobile {
+        padding-inline: 0;
+    }
+}

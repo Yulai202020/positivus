@@ -300,7 +300,7 @@ html(lang='en')
                                     div.team-card-body
                                         p 2+ years of experience in writing and editing Skilled in creating compelling, SEO-optimized content for various industries
                         button.team-button.button(type="button") See all team
-            section.section.container
+            section.section.section-hidden-x.container
                 header.section-header
                     h2.section-title.puddle-bg Testimonials
                     div.section-description
@@ -376,7 +376,94 @@ html(lang='en')
                             button.reviews-arrow-button(type="button")
                                 span.visually-hidden Next slide
                                 include images/icons/arrow-right.svg
-        footer.footer
+            section.section.container
+                header.section-header
+                    h2.section-title.puddle-bg Contact Us
+                    div.section-description
+                        p
+                            | Connect with Us: Let's Discuss
+                            br
+                            | Your Digital Marketing Needs
+                div.section-body
+                    div.contact-us
+                        form.contact-us-form
+                            fieldset.contact-us-request-types.radios
+                                legend.radios-title.visually-hidden Request type
+                                label.radios-item.radio
+                                    input.radio-input.visually-hidden(type="radio", name="request-type" value="Say Hi")
+                                    span.radio-emulator
+                                    span.radio-label Say Hi
+
+                                label.radios-item.radio
+                                    input.radio-input.visually-hidden(type="radio", name="request-type" value="Get a Quote")
+                                    span.radio-emulator
+                                    span.radio-label Get a Quote
+                            div.contact-us-body
+                                div.contact-us-field.field
+                                    label.field-label(for="name") Name
+                                    input.field-input(id="name", name="name", placeholder="Name")
+                                div.contact-us-field.field
+                                    label.field-label(for="email") Email*
+                                    input.field-input(id="email", name="email", placeholder="Email", required)
+                                div.contact-us-field.field
+                                    label.field-label(for="message") Message*
+                                    textarea.field-input.field-textarea(id="message", name="message", placeholder="Message", required)
+                            button.contact-us-button.button(type="submit") Send Message
+        footer.footer.container
+            div.footer-inner
+                div.footer-navigation
+                    a.footer-logo(href="/")
+                        img.footer-logo-image(src="./images/logo-light.svg" alt="Positivus Logo" width="180" height="29")
+                    nav.footer-menu
+                        ul.footer-menu-list
+                            li.footer-menu-item
+                                a.footer-menu-link(href="/") About us
+                            li.footer-menu-item
+                                a.footer-menu-link(href="/") Services
+                            li.footer-menu-item
+                                a.footer-menu-link(href="/") Use Cases
+                            li.footer-menu-item
+                                a.footer-menu-link(href="/") Pricing
+                            li.footer-menu-item
+                                a.footer-menu-link(href="/") Blog
+                    div.footer-soc1als.soc1als
+                        ul.soc1als-list
+                            li.soc1als-item
+                                a.soc1als-link(href="/")
+                                    span.visually-hidden linkedin
+                                    include images/icons/linkedin.svg
+                            li.soc1als-item
+                                a.soc1als-link(href="/")
+                                    span.visually-hidden facebook
+                                    include images/icons/facebook.svg
+                            li.soc1als-item
+                                a.soc1als-link(href="/")
+                                    span.visually-hidden twitter
+                                    include images/icons/twitter.svg
+                div.footer-body
+                    div.footer-contacts
+                        h2.footer-contacts-title.puddle-bg.h4 Contact us:
+                        address.footer-contacts-body
+                            p Email: 
+                                a(href="emailto:info@positivus.com") info@positivus.com
+                            p Phone: 
+                                a(href="tel:5555678901") 555-567-8901
+                            p
+                                | Address: 1234 Main St
+                                br
+                                | Moonstone City, Stardust State 12345
+                    form.footer-subcribe-form.subcribe-form
+                        h2.visually-hidden Subcription
+                        div.subcribe-form-field.field.field-big.field-dark
+                            label.field-label.visually-hidden(for="subcribe-email") Email
+                            input.field-input(id="subcribe-email", name="email", placeholder="Email", type="email", required)
+                        button.subcribe-for-button.button.button-lime(type="submit") Subscribe to news
+                div.footer-extra
+                    p.footer-copyright 
+                        | ©
+                        time(datetime="2023") 2023
+                        | Positivus. All Rights Reserved.
+                    a.footer-privacy-policy-link(href="") Privacy Policy
         dialog.mobile-overlay.visible-mobile(id="mobileOverlay")
             form.mobile-overlay-close-button-wrapper(method="dialog")
                 button.mobile-overlay-close-button.cross-button(type="submit")

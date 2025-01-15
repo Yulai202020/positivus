@@ -26,6 +26,16 @@
         color: $black;
         background-color: transparent;
     }
+
+    &.button-lime {
+        background-color: $lime;
+        color: $dark;
+
+        @include hover {
+            background-color: $black;
+            color: $lime;
+        }
+    }
 }
 
 .visually-hidden {
@@ -208,5 +218,145 @@
                 }
             }
         }
+    }
+}
+
+
+.radios {
+    display: flex;
+    column-gap: 35px;
+    border: none;
+
+    .radios-title {
+
+    }
+
+    .radio {
+        @include hover {
+            opacity: 0.6;
+        }
+
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+        transition-duration: $animation-duration;
+
+        .radio-input {
+            &:not(:checked) + .radio-emulator::after {
+                opacity: 0;
+            }
+        }
+
+        .radio-emulator {
+            @include flex-center(false);
+            @include square(28px);
+
+            position: relative;
+            background-color: $white;
+            border: $border;
+            border-radius: 50%;
+
+            &::after {
+                @include abs-center;
+                @include square(60%);
+
+                content: '';
+                background-color: $lime;
+                border-radius: inherit;
+                transition-duration: $animation-duration;
+            }
+        }
+
+        .radio-label {
+
+        }
+    }
+}
+
+.field {
+    --fieldInputHeight: #{$input-height};
+    --fieldInputTextColor: #{$black};
+    --fieldInputBgColor: #{$white};
+    --fieldInputBorderColor: #{$black};
+    --fieldInputPlaceholderColor: #{$grey};
+    --fieldInputHoverBgColor: #{$lime};
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 5px;
+
+    .field-label {
+        @include fluid-text(16, 14);
+    }
+
+    .field-input {
+        @include hover {
+            background-color: var(--fieldInputHoverBgColor);
+        }
+
+        width: 100%;
+        height: var(--fieldInputHeight);
+        padding-inline: 30px;
+        color: var(--fieldInputTextColor);
+        background-color: var(--fieldInputBgColor);
+        border: 1px solid var(--fieldInputBorderColor);
+        border-radius: $border-radius;
+
+        &.field-textarea {
+            height: 190px;
+            padding-block: 18px;
+            resize: none;
+
+            @include mobile {
+                height: 132px;
+            }
+        }
+
+        &:focus {
+            border-color: $lime;
+            outline: none;
+        }
+
+        &::placeholder {
+            color: var(--fieldInputPlaceholderColor);
+        }
+
+        @include mobile {
+            padding-inline: 20px;
+        }
+    }
+
+
+    &.field-big {
+        --fieldInputHeight: $button-height
+    }
+
+    &.field-dark {
+        --fieldInputBgColor: #{$dark};
+        --fieldInputBorderColor: #{$white};
+        --fieldInputPlaceholderColor: #{$white};
+        --fieldInputTextColor: #{$lime};
+        --fieldInputHoverBgColor: #{$black};
+    }
+
+    @include mobile {
+        row-gap: 10px;
+    }
+}
+
+.subcribe-form {
+    display: flex;
+    padding: 58px 40px;
+    background-color: $dark;
+    border-radius: $border-radius;
+    column-gap: 20px;
+
+    @include desktop {
+        flex-direction: column;
+        row-gap: 22px;
+        padding: 30px;
+        width: 100%;
+        max-width: 450px;
     }
 }
